@@ -1,3 +1,5 @@
+
+
 body{
     background-color: #2d00f7;
     color:#b100e8 ;
@@ -199,11 +201,29 @@ body{
  }
 /******Site Bootstrap*************/
 
-
+#Floppy{
+    text-align: center;
+    margin: 0 auto;
+    width: 431px;
+    color: #090031;
+}
+#Floppy h1{
+     
+    background: url("https://i.ibb.co/Q9yv5Jk/flappy-bird-set.png") 0% 340px;
+    padding: 1.2rem 0;
+     margin: 0;
+      
+}
+.score-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 6px;
+    background: #5EE270;
+  }
 
 
 /***************to do list*************/
 
 /************Produit****************/
 
-/**************brique*****************/
+/**************Floppy*****************/
