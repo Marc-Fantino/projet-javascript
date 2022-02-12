@@ -2,7 +2,7 @@ let menuNav = document.getElementById("header");
 
 menuNav.innerHTML = 
 `
-    <a href="index.html" class="">Connexion</a>
+    <a href="accueil.html" class="">Accueil</a>
     <a href="brique.html" class="">Casse Brique</a>
     <a href="todolist.html" class="">To Do list</a>
     <a href="produit.html" class="">Nos produits</a>
@@ -25,16 +25,16 @@ photoSurVideo.innerHTML =
 <P>Artiste Graphique - Web Designer - Illustrateur</p>
 
 `
-let champImage = document.getElementById("champ-image");
+let champImage = document.getElementById("image-champ");
 
 champImage.innerHTML =
 
 `    
-    <i class="fa-solid fa-ufo"></i>
-    Mes envie de voyage
-    <i class="fa-solid fa-user-chef »></i>
+<i class="fa fa-motorcycle" aria-hidden="true"></i>
+    <p>Mes envie de voyage</p>
+    <i class="fa fa-cutlery" aria-hidden="true"></i>
     <p>Mes plats préféré</p>
-    <i class="fa-solid fa-dice-d6 »></i>
+    <i class="fa fa-gamepad" aria-hidden="true"></i>
     <p>Mes Jeux Vidéo</p>
 
 `

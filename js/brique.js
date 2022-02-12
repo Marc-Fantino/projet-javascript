@@ -68,16 +68,30 @@ const render = () => {
             if(pipe[0] <= -pipeWidth){
                 currentScore++;
                 bestScore = Math.max(bestScore, currentScore);
-                //apparaitre et réaparaitre
+                //apparaitre et réaparaitre nouvelle
                 pipes = [...pipes.slice(1), [pipes[pipes.length-1][0] + pipeGap + pipeWidth, pipeLoc()]];
 
                 console.log(pipes);
             }
+            //fin de parti si on tape le poteau 
+
+            if([
+                pipe[0] <= cTenth + size[0],
+                pipe[0] + pipeWidth >= cTenth,
+                pipe[1] > flyHeight || pipe[1] + pipeGap < flyHeight +size[1]
+            ].every(elem => elem)) {
+                gamePlaying = false;
+                setup();
+
+            }
+
         })
 
     }
     document.getElementById('affichage-du-score').innerHTML = `Meilleur : ${bestScore}`;
     document.getElementById('score-actuel').innerHTML = `Actuel : ${currentScore}`;
+
+    
 
     window.requestAnimationFrame(render);
 }    
@@ -85,3 +99,4 @@ setup();
 img.onload = render;
 document.addEventListener("click", () => gamePlaying = true);
 window.onclick = () =>  flight = jump;
+
