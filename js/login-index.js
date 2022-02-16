@@ -1,10 +1,10 @@
 const login = "loginUser";
 const password = "1234";
 
-let number = Math.round ((Math.random()* 999) );
+let chiffre = Math.round(Math.random()* 999);
 let erreurLogin = document.getElementById("erreur");
 
-document.getElementById("span").innerHTML= number
+document.getElementById("toto").innerHTML = chiffre
 
 function openNav() {
     document.getElementById("deroulant").style.width ="100%";
@@ -21,14 +21,14 @@ function connexion(){
     console.log("ecris login="+loginUser)
     console.log("ecris le mot de passe="+passwordUser)
     console.log("ecris chiffre="+chiffreUser)
-    console.log(number)
+    console.log(chiffre)
 
     if(loginUser ==="" || passwordUser === "" || chiffreUser ===""){
         erreurLogin.className ="erreur";
         erreurLogin.innerHTML ="Merci de renseigner tous les champs";
     }
     else{
-        if(loginUser === login && passwordUser === password && chiffreUser == number){
+        if(loginUser === login && passwordUser === password && chiffreUser == chiffre){
             console.log("ok")
             document.getElementById("form").style.display ="none";
             document.getElementById("chargement").classList.add("charger");

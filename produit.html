@@ -18,11 +18,30 @@
 
 
 <body>
+
+    <div id="deroulant" class="menu-deroulant">
+        <a href="javascript:voide(0)" class="bouton-fermé" onclick="closeNav()">&times;
+            <div id="header" class="header-menu"></div>
+        </a>
+    </div>
+    <span class="ouverture-menu" onclick="openNav()">Menu</span>
+<div id="tableau_complet">
+    <div class="panier1">
+        <h2>Nos produits</h2>
+        <ul id="tableau1"></ul>
+    </div>
+    <div class="panier2">
+        <h2>Votre panier</h2>
+        <ul id="tableau2"></ul>
+    </div>
+</div>
+
+
+
     <script src="js/login-index.js" type="text/javascript"></script>
     <script src="js/accueil.js" type="text/javascript"></script>
-    <script src="js/brique.js" type="text/javascript"></script>
     <script src="js/produit.js" type="text/javascript"></script>
-    <script src="js/todolist.js" type="text/javascript"></script>
+    
 </body>
 
 </html>

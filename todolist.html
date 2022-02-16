@@ -18,6 +18,15 @@
 
 
 <body>
+<div id="deroulant" class="menu-deroulant">
+        <a href="javascript:voide(0)" class="bouton-fermé" onclick="closeNav()">&times;
+            <div id="header" class="header-menu"></div>
+        </a>
+    </div>
+    <span class="ouverture-menu" onclick="openNav()">Menu</span>
+ 
+    
+    <div class="container-liste">
 
         <div class="liste">
             <h1>todo list</h1>
@@ -26,8 +35,13 @@
             </form>
             <ul id="list"></ul>
         </div>
-  
-    <script src="js/todolist.js" type="text/javascript"></script>
+    </div>
+     
+
+
+        <script src="js/login-index.js" type="text/javascript"></script>
+        <script src="js/accueil.js" type="text/javascript"></script>
+        <script src="js/todolist.js" type="text/javascript"></script>
 </body>
 
 </html>
