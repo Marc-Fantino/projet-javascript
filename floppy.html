@@ -12,33 +12,54 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Rowdies&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style2.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
-<div id="deroulant" class="menu-deroulant">
-    <a href="javascript:voide(0)" class="bouton-fermé" onclick="closeNav()">&times;
-        <div id="header" class="header-menu"></div>
-    </a>
-</div>
-<span class="ouverture-menu" onclick="openNav()">Menu</span>
 
-<header id="Floppy">
+<body class="coin-jeu">
 
-
-    <h1>Jeu Floppy-Bird</h1>
-    <div class="score-container">
-        <div id="affichage-du-score"></div>
-        <div id="score-actuel"></div>
+    <div id="deroulant" class="menu-deroulant">
+        <a href="javascript:voide(0)" class="bouton-fermé" onclick="closeNav()">&times;
+            <div id="header" class="header-menu"></div>
+        </a>
     </div>
+    <span class="ouverture-menu" onclick="openNav()">Menu</span>
+    
    
-    <canvas id="canvas" width="431" height="768"></canvas> 
-</header>
+        <div id="Floppy">
+            <h1>Jeu Floppy-Bird</h1>
+            <div class="score-container">
+                <div id="affichage-du-score"></div>
+                <div id="score-actuel"></div>
+            </div>
+           
+            <canvas id="canvas" width="431" height="768"></canvas> 
+        </div>
+
+        <section>
+
+            <div class="jeu2d">
+                <div class="newjeu2d">
+                    <img src="img/img.png" alt="personnage de jeu">
+                </div>
+                <div class="boule"></div>  
+                
+        
+                <div class="controler">
+                    <button onclick="sauter()">Sauter</button>
+                    <a href="floppy.html">Commencer</a>
+                </div>
+            </div>
+        </section>
 
 
-<body>
+    
+    
     <script src="js/login-index.js" type="text/javascript"></script>
     <script src="js/accueil.js" type="text/javascript"></script>
     <script src="js/floppy.js" type="text/javascript"></script>
+    <script src="js/jeu2d.js" type="text/javascript"></script>
 
 </body>
 

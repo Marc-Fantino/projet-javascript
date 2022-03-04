@@ -3,7 +3,7 @@ let menuNav = document.getElementById("header");
 menuNav.innerHTML = 
 `
     <a href="accueil.html" class="">Accueil</a>
-    <a href="floppy.html" class="">Floppy</a>
+    <a href="floppy.html" class="">Mes Jeux</a>
     <a href="todolist.html" class="">To Do list</a>
     <a href="produit.html" class="">Nos produits</a>
     <a href="contact.html" class="">Contact</a>

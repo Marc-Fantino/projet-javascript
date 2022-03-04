@@ -8,7 +8,7 @@ img.src = './img/flappy-bird-set.png';
 let gamePlaying = false;
 const gravity = .5;
 const size = [51, 36];
-const speed = 6.2;
+const speed = 9.2;
 const jump = -8.5;
 const cTenth = (canvas.width / 10);
 
@@ -30,7 +30,7 @@ const setup = () => {
     currentScore = 0;
     flight = jump;
     flyHeight =(canvas.height / 2) - (size[1] / 2);
- // création premiere 3 pipes
+ // création premiere 3 tubes
     pipes = Array(3).fill().map((a, i) => [canvas.width + (i * (pipeGap + pipeWidth)), pipeLoc()]);
 }
 

@@ -4,9 +4,7 @@ body{
   background:linear-gradient(-80deg, #0c0b0e, #b100e8);
     color:#b100e8 ;
     font-family: 'Rowdies', cursif;
-    margin: 0;
-    right: 0;
-    left: 0;
+
 }
 .h1{
     color: #db00b6;
@@ -96,52 +94,8 @@ body{
     100% { transform: rotate(360deg); }
 }
 
-/**************accueil**************/
+/**************accueil effet sur l'image de depart **************/
 
-
-.ouverture-menu{
-  position: absolute;
-   background:linear-gradient(-80deg, #0c0b0e, #b100e8);
-   width: 100%;
-   height: 100px;
-   line-height: 100px;
-   text-align: center; 
-   font-size: 3em;
-   color: white;
-   z-index: 1;
-   border: 3px solid #db00b6;
-}
-.menu-deroulant{
-    height: 100%;
-    width: 0;
-    position: fixed;
-    background-image: url(../img/orion-nebula-gc37ea61b7_1920.jpg);
-    z-index: 2;
-    overflow: hidden;
-    transition: 0.8s;
-}
-.menu-deroulant-content{
-    position: relative;
-    top: 40%;
-    width: 100%;
-    text-align: center;
-}
-.menu-deroulant a {
-    text-decoration: none;
-    color:white;
-    padding: 8px;
-    font-size: 35px;
-    display: block;
-    transition: 0.4s;
-}
-
-.menu-deroulant .bouton-fermé{
-    position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
-    color:white;   
-}
 /******Site Bootstrap*************/
 /***********block 1 ********************************/
 #containerVideo{
@@ -241,12 +195,21 @@ body{
 
 /******Site Bootstrap*************/
 /**************Floppy*****************/
-#Floppy{
-    text-align: center;
-    margin: 0 auto;
-    width: 431px;
-    color: #090031;
+.coin-jeu{
+  background-image: url(/img/gamepad-gbf0948e82_1920.png);
 }
+#Floppy{
+  
+   position: absolute;
+    text-align: center;
+    margin-left: 100px;
+    width: 431px;
+    color: b100e8;
+    margin-top: 120PX;
+    border: 2px solid black;
+    
+}
+
 #Floppy h1{
      
     background: url("https://i.ibb.co/Q9yv5Jk/flappy-bird-set.png") 0% 340px;
@@ -255,21 +218,135 @@ body{
       
 }
 .score-container {
+  color: white;
     display: flex;
     justify-content: space-between;
     padding: 8px 6px;
     background:linear-gradient(-80deg, #0c0b0e, #b100e8);
   }
 /**************Floppy*****************/
+/****jeu2d*********/
+section {
+  position: absolute;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  background-color: #fff;
+  padding: 20px;
+  margin-left: 70%;
+  margin-top: 10%;
+  border-radius: 6px;
+  box-shadow: 0 0 50px rgba(0,0,0,0.1);
+  height: 30  0px;
+  background:linear-gradient(-80deg, #0c0b0e, #b100e8);
+}
+.jeu2d {
+  width: 500px;
+  height: 200px;
+  border: 1px solid #000;
+  border: 0;
+  border-bottom: 1px solid #18f;
+}
+
+.newjeu2d{
+  width: 20px;
+  height: 50px;
+  position: relative;
+  top: 150px;
+ 
+  
+}
+
+.animation {
+  animation:  perso-saut 500ms infinite;
+}
+
+/*Animation personnage saute*/
+@keyframes   perso-saut {
+  0%{
+      top: 130px;
+  }
+  25% {
+      top: 80px;
+  }
+  50% {
+      top: 80px;
+  }
+  100% {
+      top: 130px;
+  }
+}
+
+
+
+.newjeu2d img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.boule {
+  width: 20px;
+  height: 20px;
+  background-color: #333;
+  position: relative;
+  top:130px;
+  left: 480px;
+  border-radius: 50%;
+  animation: anime-obstacles 2.5s infinite ;
+  
+}
+
+/*animation obstacles*/
+
+@keyframes anime-obstacles {
+  0%{
+      left: 480px;
+  }
+  100% {
+      left: -40px;
+  }
+
+}
+
+
+
+.controler {
+  margin-top: 20px;
+  text-align: center;
+}
+
+a,button {
+  padding: 10px 50px;
+  border-radius: 4px;
+  border: 0;
+  box-shadow: 0 0 50px rgba(0,0,0,0.1);
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #fff;
+  font-size: 15px;
+  text-decoration: 0;
+  color: #000;
+  margin-top: 150px;
+}
+/*************jeu2d***************/
 
 /***************to do list*************/
+.list{
+  background-image: url(/img/thunderstorm-g7ab458af6_1920.jpg);
+
+}
+
 .container-liste{
+  position: absolute;
   margin-top: 150px;
+  margin-left: 600px;
+  display: flex;
+  
 }
 .liste {
     width: 540px;
-    margin-left: auto;
-    margin-right: auto;
+    height: 300px;
     text-align: center;
     background:linear-gradient(-80deg, #0c0b0e, #b100e8);
     padding: 2rem 1rem;
@@ -281,6 +358,7 @@ body{
     letter-spacing: 0.4rem;
     font-size: 2.35rem;
     text-shadow: -1px 3px 2px #b100e8;
+    color: white;
   }
   .liste form {
     margin: 2rem 0;
@@ -349,132 +427,224 @@ body{
     }
   }
 /************Produit****************/
-.conteneur{
-  width: 70%;
-  text-align: center;
-  border: solid 2px #70898C;
-  border-radius: 5px;
-  padding: 20px;
-}
-/*Page produits*/
-#tableau_complet{
-  display: flex;
-  justify-content: space-between;
-}
-.panier1{
-  width: 70%;
-  text-align: center;
-  border: solid 2px #70898C;
-  border-radius: 5px;
-  padding: 20px;
-  margin-left: 40px;
+#tableau_complet{ 
+
+  display: flex; 
+  justify-content: space-around; 
+  margin-left:20px ;
+  color: #0c0b0e;
+} 
+.panier1{ 
+  width: 60%; 
+  text-align: center; 
+  border: solid 3px  #b100e8; 
+  border-radius: 10px;  
+  margin-left: 0;
   margin-top: 150px;
-  flex-wrap: wrap;
-}
-.panier2{
-  flex-wrap: wrap;
-  width: 25%;
-  margin-right: 40px;
-  margin-left: 40px;
-  text-align: center;
-  border: solid 2px #70898C;
-  border-radius: 5px;
-  padding: 20px;
-  margin-top: 150px;
-}
-.produits{
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
+  padding: 20px;   
+  flex-wrap: wrap; 
+  color: white;
+} 
+.panier2{ 
+  flex-wrap: wrap;  
+  width: 25%; 
+  margin-right: 40px; 
+  margin-left: 40px; 
+  text-align: center; 
+  border: solid 3px  #b100e8; 
+  border-radius: 10px; 
+  padding: 20px; 
+  margin-top: 150px; 
+  color: white;
 
-.image-produit{
-  width: 100px;
-  height: 100px;
-}
-.titre-produit{
-  font-size: 35px;
-  color: #1ABC9C;
-}
-select{
-  padding: 10px;
-  border: solid #3498db 2px;
-  border-radius: 10px;
-  width: 100%;
-  margin-top: 10px;
-  font-family: 'Ubuntu', sans-serif;
-}
-.produit-card{
-  display: block;
-  width: 33%;
-  box-shadow: 2px 2px 10px 2px rgba(0,0,0,0.2);
-  padding: 10px;
-  font-size: 16px;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-.produit-card-panier{
-  color: #3498db;
-  box-shadow: 2px 2px 10px 2px rgba(0,0,0,0.2);
-  font-size: 16px;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.input-quantite{
-  border: solid 2px #70898C;
-  border-radius: 10px;
-  height: 20px;
-  padding: 10px;
-}
-.prix-para{
-  display: block;
-}
+} 
+/*test copié sur michael*/
+.produits{ 
 
-#panier{
-  padding: 0;
-}
+  display: flex; 
 
-.supprimer-produit{
-  font-size: 60px;
-  color: #F25041;
-}
+  justify-content: center; 
 
-.btn-inline-quantite{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.quantite{
-  font-size: 20px;
-  padding-right: 10px;
-  padding-left: 10px;
-}
+  flex-wrap: wrap; 
 
+}
+.image-produit{  
+  width: 100px; 
+  height: 100px; 
+} 
 
-.prix{
-  color: darkcyan;
-  font-size: 22px;
-}
-.rechercher{
-  border: none;
-  border-bottom: #1ABC9C solid 2px;
-  outline: none;
-  width: 90%;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 22px;
-}
+.titre-produit{ 
 
-.produit-card-result{
-  display: block;
-  width: 33%;
-  box-shadow: 2px 2px 10px 2px rgba(0,0,0,0.2);
-  padding: 10px;
-  font-size: 16px;
-  margin-left: 10px;
-  margin-right: 10px;
-  background-color: #2c3e50;
-  color: #BA4C63;
-}
+  font-size: 35px; 
+
+  color: #1ABC9C; 
+
+} 
+
+select{ 
+
+  padding: 10px; 
+
+  border: solid #3498db 2px; 
+
+  border-radius: 10px; 
+
+  width: 100%; 
+
+  margin-top: 10px; 
+
+  font-family: 'Ubuntu', sans-serif; 
+
+} 
+
+.produit-card{ 
+
+  display: block; 
+
+  width: 33%; 
+
+  box-shadow: 2px 2px 10px 2px rgba(0,0,0,0.2); 
+
+  padding: 10px; 
+
+  font-size: 16px; 
+
+  margin-left: 10px; 
+
+  margin-right: 10px; 
+
+} 
+
+.produit-card-panier{ 
+
+  color: #3498db; 
+
+  box-shadow: 2px 2px 10px 2px rgba(0,0,0,0.2); 
+
+  font-size: 16px; 
+
+  padding: 20px; 
+
+  display: flex; 
+
+  justify-content: center; 
+
+  align-items: center; 
+
+  flex-wrap: wrap; 
+
+} 
+
+.input-quantite{ 
+
+  border: solid 2px #70898C; 
+
+  border-radius: 10px; 
+
+  height: 20px; 
+
+  padding: 10px; 
+
+} 
+
+.prix-para{ 
+
+  display: block; 
+
+} 
+
+ 
+ 
+
+#panier{ 
+
+  padding: 0; 
+
+} 
+
+ 
+ 
+
+.supprimer-produit{ 
+
+  font-size: 60px; 
+
+  color: #F25041; 
+
+} 
+
+ 
+ 
+
+.btn-inline-quantite{ 
+
+  display: flex; 
+
+  align-items: center; 
+
+  justify-content: center; 
+
+} 
+
+.quantite{ 
+
+  font-size: 20px; 
+
+  padding-right: 10px; 
+
+  padding-left: 10px; 
+
+} 
+
+ 
+ 
+ 
+
+.prix{ 
+
+  color: darkcyan; 
+
+  font-size: 22px; 
+
+} 
+
+.rechercher{ 
+
+  border: none; 
+
+  border-bottom: #1ABC9C solid 2px; 
+
+  outline: none; 
+
+  width: 90%; 
+
+  font-family: 'Ubuntu', sans-serif; 
+
+  font-size: 22px; 
+
+} 
+
+ 
+ 
+
+.produit-card-result{ 
+
+  display: block; 
+
+  width: 33%; 
+
+  box-shadow: 2px 2px 10px 2px rgba(0,0,0,0.2); 
+
+  padding: 10px; 
+
+  font-size: 16px; 
+
+  margin-left: 10px; 
+
+  margin-right: 10px; 
+
+  background-color: #2c3e50; 
+
+  color: #BA4C63; 
+
+} 
