@@ -4,7 +4,7 @@ const password = "1234";
 let chiffre = Math.round(Math.random()* 999);
 let erreurLogin = document.getElementById("erreur");
 
-document.getElementById("toto").innerHTML = chiffre
+document.getElementById("Nombre").innerHTML = chiffre
 
 function openNav() {
     document.getElementById("deroulant").style.width ="100%";
