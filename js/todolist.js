@@ -5,7 +5,7 @@ const todo = document.getElementById("todo");
 // comment ajouter un élément 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    list.innerHTML += `<li>S${todo.value}</li>`
+    list.innerHTML += `<li>${todo.value}</li>`
     stockage();
     todo.value ='';
 });
