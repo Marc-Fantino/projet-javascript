@@ -351,7 +351,7 @@ a,button {
 }
 .liste {
     width: 540px;
-    height: 300px;
+    height: 100%;
     text-align: center;
     background:linear-gradient(-80deg, #0c0b0e, #b100e8);
     padding: 2rem 1rem;
