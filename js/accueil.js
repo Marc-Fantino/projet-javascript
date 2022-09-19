@@ -6,7 +6,6 @@ menuNav.innerHTML =
     <a href="floppy.html" class="">Mes Jeux</a>
     <a href="todolist.html" class="">To Do list</a>
     <a href="produit.html" class="">Nos produits</a>
-    <a href="contact.html" class="">Contact</a>
     <a href="#" class="icon" onclick="showHideMenu()">
     <i class="fa-solid fa-flower-tulip"></i>
 `
